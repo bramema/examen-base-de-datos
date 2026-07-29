@@ -112,3 +112,7 @@ Monto
 
 **Parte 2: Diagrama Conceptual de Entidad-Relación**
 ![Captura Tabla](/image/B.png)
+
+
+
+
