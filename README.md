@@ -123,6 +123,8 @@ El objetivo fue organizar correctamente la información de la tienda de libros, 
 
 **Parte 3: Diagrama UML E-R**
 
+![Captura Tabla](/image/c.png)
+
 **Claves Primarias (PK)**
 Autor → id_autor
 Libro → ISBN
