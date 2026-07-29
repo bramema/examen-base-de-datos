@@ -114,5 +114,25 @@ Monto
 ![Captura Tabla](/image/B.png)
 
 
+**Parte 3: Diagrama UML E-R**
 
+**Claves Primarias (PK)**
+Autor → id_autor
+Libro → ISBN
+Editorial → id_editorial
+Categoría → id_categoria
+Cliente → id_cliente
+Pedido → id_pedido
+Detalle_Pedido → id_detalle
+Pago → id_pago
+
+
+**Claves Foráneas (FK)**
+Libro.id_autor → Autor.id_autor
+Libro.id_editorial → Editorial.id_editorial
+Libro.id_categoria → Categoria.id_categoria
+Pedido.id_cliente → Cliente.id_cliente
+Detalle_Pedido.id_pedido → Pedido.id_pedido
+Detalle_Pedido.ISBN → Libro.ISBN
+Pago.id_pedido → Pedido.id_pedido
 
