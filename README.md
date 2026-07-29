@@ -1,3 +1,3 @@
 # examen-base-de-datos
 
-![captura de pantalla]("image/a.png")
+![Captura Tabla](/examen-base-de-datos/image/a.png)
