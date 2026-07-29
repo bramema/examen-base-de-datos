@@ -8,15 +8,11 @@ NORMALIZACION
 **(1FN)**
 
 Todos los atributos deben ser atómicos y no deben existir grupos repetitivos.
-Se identifica que un cliente puede comprar varios libros y un libro puede venderse muchas veces.
+Al revisar la tabla se observa que un cliente puede realizar varias compras y que 
+un mismo libro puede aparecer en diferentes ventas. Por eso se debe organizar mejor la 
+información para evitar repetir datos.
 
-La clave candidata podría ser:
-
-(ISBN, Cliente)
-
-aunque realmente haría falta un identificador de pedido.
-
-La tabla queda igual:
+En esta etapa se utiliza un identificador de venta para diferenciar cada compra realizada.
 
 **VENTAS**
 
@@ -26,8 +22,7 @@ Justificación
 
 Cumple 1FN porque:
 
-No existen listas dentro de una celda.
-Todos los campos contienen un solo valor.
+Cumple con la Primera Forma Normal porque cada campo contiene un solo dato y no existen valores repetidos dentro de una misma celda.
 
 
 **(2FN)**
@@ -65,22 +60,25 @@ La información de la compra permanece en VENTAS.
 
 
 **(3FN)**
-Se eliminan las dependencias transitivas separando las entidades que se repiten.
+En la Tercera Forma Normal se separan los datos que se repiten en diferentes registros para evitar información duplicada.
 
 **AUTORES**
 --------
 IdAutor (PK)
 NombreAutor
+Se crea una tabla de autores porque un autor puede tener varios libros y así evitamos repetir su nombre.
 
 **EDITORIALES**
 -----------
 IdEditorial (PK)
 NombreEditorial
+Se separa la editorial porque una misma editorial puede publicar varios libros.
 
 **CATEGORIAS**
 ----------
 IdCategoria (PK)
 NombreCategoria
+Se crea una tabla de categorías para guardar cada categoría una sola vez.
 
 **LIBROS**
 -------
@@ -112,6 +110,15 @@ Monto
 
 **Parte 2: Diagrama Conceptual de Entidad-Relación**
 ![Captura Tabla](/image/B.png)
+
+En este diagrama se organizó toda la información de la tienda de libros para mostrar cómo se relacionan los datos entre sí. En lugar de tener toda la información en una sola tabla, se dividió en varias entidades, haciendo que la base de datos sea más ordenada y fácil de administrar.
+
+¿Qué representa cada figura?
+Rectángulos: representan las entidades, Por ejemplo: Libro, Autor, Cliente, Pedido, etc.
+Óvalos: representan los atributos, que son los datos que guarda cada entidad.
+Rombos: representan las relaciones entre las entidades. Indican cómo interactúan entre si.
+
+El objetivo fue organizar correctamente la información de la tienda de libros, evitando datos repetidos y mostrando claramente cómo se relacionan todas las tablas. Esto facilita la creación de la base de datos y permite que el sistema funcione de forma más eficiente al registrar libros, clientes, pedidos y pagos.
 
 
 **Parte 3: Diagrama UML E-R**
