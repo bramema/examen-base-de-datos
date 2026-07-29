@@ -109,3 +109,4 @@ MetodoPago
 Monto
 
 
+![Captura Tabla](/image/B.png)
