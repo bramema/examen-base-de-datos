@@ -64,3 +64,49 @@ Los datos del cliente dependen únicamente de IdCliente.
 La información de la compra permanece en VENTAS.
 
 
+**(3FN)**
+Se eliminan las dependencias transitivas separando las entidades que se repiten.
+
+**AUTORES**
+--------
+IdAutor (PK)
+NombreAutor
+
+**EDITORIALES**
+-----------
+IdEditorial (PK)
+NombreEditorial
+
+**CATEGORIAS**
+----------
+IdCategoria (PK)
+NombreCategoria
+
+**LIBROS**
+-------
+ISBN (PK)
+Titulo
+FechaPublicacion
+Precio
+Stock
+IdAutor (FK)
+IdEditorial (FK)
+IdCategoria (FK)
+
+**CLIENTES**
+---------
+IdCliente (PK)
+CorreoCliente
+DireccionCliente
+TelefonoCliente
+
+**VENTAS**
+-------
+IdVenta (PK)
+ISBN (FK)
+IdCliente (FK)
+MetodoPago
+Monto
+
+
+
